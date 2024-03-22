@@ -52,5 +52,17 @@ dc.verifyContainsText(dc.successMessage,"success");
     }
 
 
+    @When("Create a country name as  {string}  code as {string}")
+    public void createACountryNameAsCodeAs(String ulkeAdi, String ulkeKodu) {
+
+        dc.myClick(dc.addBuutton);
+        dc.mySendKeys(dc.nameInput,ulkeAdi);//ulke ad ve kodundan cift tirnak kaldirdim .cünkü artik sabit degil degiskendir
+        dc.mySendKeys(dc.codeInput, ulkeKodu);
+        dc.myClick(dc.saveButton);
+
+
+
+
 
     }
+}
