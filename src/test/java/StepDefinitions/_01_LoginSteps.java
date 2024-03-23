@@ -32,9 +32,10 @@ public class _01_LoginSteps {
        // wait.until(ExpectedConditions.visibilityOf(dc.username));
 //
 
-       dc.mySendKeys(dc.username, "turkeyts");
-       dc.mySendKeys(dc.password, "TechnoStudy123");
-       dc.myClick(dc.loginButton);
+        dc.mySendKeys(dc.username, "turkeyts");
+        dc.mySendKeys(dc.password, "TechnoStudy123");
+        dc.myClick(dc.loginButton);
+
 
     }
 
@@ -43,13 +44,13 @@ public class _01_LoginSteps {
         System.out.println("Siteye girildigi kontrol edildi");
 
 
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.textToBePresentInElement(dc.headText,"Internship"));
+       // WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+        //wait.until(ExpectedConditions.textToBePresentInElement(dc.headText,"Internship"));
+//
+  //     Assert.assertTrue(dc.headText.getText().equals("Internship"));
 
-       Assert.assertTrue(dc.headText.getText().equals("Internship"));
 
-
-
+        dc.verifyContainsText(dc.headText,"Internship");
 
 
 
