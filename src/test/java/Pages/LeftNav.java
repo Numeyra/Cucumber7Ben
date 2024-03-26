@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-    public class LeftNav extends ParentPage{
+    public class LeftNav extends ParentPage {
 
         public LeftNav() {
-            PageFactory.initElements(GWD.getDriver(),this);
+            PageFactory.initElements(GWD.getDriver(), this);
         }
 
         @FindBy(xpath = "(//span[text()='Setup'])[1]")
@@ -24,7 +24,23 @@ import org.openqa.selenium.support.PageFactory;
         @FindBy(xpath = "(//span[text()='Citizenships'])[1]")
         public WebElement citizenship;
 
+        public WebElement getWebElement(String strElement) {
+
+            switch (strElement){
+                case "setup" : return this.setup;
+                case "parameters" : return this.parameters;
+                case "countries" : return this.countries;
+                case "citizenship" : return this.citizenship;
+
+            }
+
+            return null;
+        }
+
+
     }
+
+
 
 
 

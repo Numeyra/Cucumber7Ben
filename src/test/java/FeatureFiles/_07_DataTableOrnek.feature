@@ -1,4 +1,4 @@
-Feature: Datatable Örnek
+Feature: Datatable Ornek
 
   Scenario: Users List
     When write username "ismet"
