@@ -57,6 +57,16 @@
            <version>7.15.0</version>
            <scope>test</scope>
        </dependency>
+
+
+       <!--        SLF4J yokedici-->
+       <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-simple</artifactId>
+           <version>2.0.12</version>
+           <scope>test</scope>
+       </dependency>
+
        <!--        commons tool-->
        <dependency>
            <groupId>org.apache.commons</groupId>
