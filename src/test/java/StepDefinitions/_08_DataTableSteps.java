@@ -57,7 +57,17 @@ public class _08_DataTableSteps {
 
     }
 
-    @And("Click on the  Element in LeftNav")
-    public void clickOnTheElementInLeftNav() {
+    @And("Click on the  Element in Nationality")
+    public void clickOnTheElementInNationality(DataTable Tiklanacaklar) {
+   List<String> strTikList=Tiklanacaklar.asList(String.class);
+
+        for (int i = 0; i < strTikList.size(); i++) {
+            WebElement linkTikElement=ln.getWebElement(strTikList.get(i));
+            ln.myClick(linkTikElement);
+        }
+
+
+        }
+
+
     }
-}

@@ -53,7 +53,7 @@ Feature: DataTable Functionality
 
 
   Scenario: Create Nationality and Delete
-    And Click on the  Element in LeftNav
+    And Click on the  Element in Nationality
       | setup         |
       | parameters    |
       | nationalities |
@@ -62,7 +62,7 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput | nuNTUlk198 |
+      | nameInput | nuNTUlk1981 |
 
     And Click on the Element in Dialog
       | saveButton |
@@ -70,7 +70,7 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
     And User delete the Element from Dialog
-      | nuNTUlk198 |
+      | nuNTUlk1981 |
 
     Then Success message should be displayed
 
@@ -84,7 +84,7 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog
-      | nameInput       | nuFee123|
+      | nameInput       | nuFee1231|
       | codeInput       | 1223121 |
       | integrationCode | 1212    |
       | priorityCode    | 234563   |
@@ -96,6 +96,6 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
     And User delete the Element from Dialog
-      | nuFee123 |
+      | nuFee1231 |
 
     Then Success message should be displayed
