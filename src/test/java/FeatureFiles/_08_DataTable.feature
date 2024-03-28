@@ -50,3 +50,25 @@ And Click on the Element in Dialog
 
       Then Success message should be displayed
 
+Scenario: Create Nationality and Delete
+  And Click on the Element in LeftNav
+
+    |setup|
+    |parameters|
+    | nationalities|
+  And Click on the Element in Dialog
+    |addButton|
+
+  And User sending the keys in Dialog
+    |nameInput|numNTulk12|
+
+
+  And Click on the Element in Dialog
+    |saveButton|
+  Then Success message should be displayed
+
+  And User delete the Element from Dialog
+    |numNTulk12|
+
+  Then Success message should be displayed
+
