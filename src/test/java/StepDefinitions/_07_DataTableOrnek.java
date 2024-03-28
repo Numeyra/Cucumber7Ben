@@ -35,7 +35,9 @@ public void writeUsernameAndPasswordAsDataTable(DataTable userPass){
   List<List<String> >listUserPass=userPass.asLists(String.class);
 
     for (int i = 0; i < listUserPass.size(); i++) {
-        System.out.println(listUserPass.get(i).get(0)+" "+listUserPass.get(i).get(1));
+        System.out.println(listUserPass.get(i).get(0)+" "
+                +listUserPass.get(i).get(1));
+
     }
 
 

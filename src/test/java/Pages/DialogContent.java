@@ -1,27 +1,28 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class DialogContent extends ParentPage{
+public class DialogContent extends ParentPage {
 
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css="[formcontrolname='username']")
+    @FindBy(css = "[formcontrolname='username']")
     public WebElement username;
 
-    @FindBy(css="input[formcontrolname='password']")
+    @FindBy(css = "input[formcontrolname='password']")
     public WebElement password;
 
-    @FindBy(css="button[aria-label='LOGIN']")
+    @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginButton;
 
-    @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
+    @FindBy(css = "span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement headText;
 
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
@@ -58,20 +59,31 @@ public class DialogContent extends ParentPage{
     public WebElement deleteDialogBtn;
 
 
-    public void deleteItem(String deleteName){
+    public void deleteItem(String deleteName) {
         mySendKeys(searchInput, deleteName);
         myClick(searchButton);
 
         //search butonun tıklanabilir olana kadar bekle
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+       // wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//ms-delete-button//button"),1));
         wait.until(ExpectedConditions.elementToBeClickable(searchButton));
 
         myClick(deleteImageBtn);
         myClick(deleteDialogBtn);
     }
 
+    public WebElement getWebElement(String strElement) {
 
+        switch (strElement) {
+            case "addButton":
+                return this.addButton;
+            case "nameInput":
+                return this.nameInput;
+            case "codeInput":
+                return this.codeInput;
+            case "saveButton":
+                return this.saveButton;
 
-
-
+        }
+        return null;
+    }
 }

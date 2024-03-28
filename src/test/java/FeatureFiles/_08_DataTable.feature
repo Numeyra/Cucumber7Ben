@@ -11,3 +11,19 @@ Feature: Datatable Functionality
       |setup|
       |parameters|
       |countries|
+
+      And Click on the Element in Dialog
+      |addButton|
+
+      And User sending the keys in Dialog
+      |nameInput|numülk236|
+      |codeInput|nuKOd23|
+
+      And Click on the Element in Dialog
+      |saveButton|
+      Then Success message should be displayed
+
+     #    And User delete the Element from Dialog
+     #    |numülk2367|
+
+      Then Success message should be displayed
