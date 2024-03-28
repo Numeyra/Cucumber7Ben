@@ -82,6 +82,8 @@ public class DialogContent extends ParentPage {
                 return this.codeInput;
             case "saveButton":
                 return this.saveButton;
+            case "shortName":
+                return this.shortName;
 
         }
         return null;

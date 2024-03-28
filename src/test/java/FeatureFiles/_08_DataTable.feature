@@ -26,4 +26,27 @@ Feature: Datatable Functionality
      #    And User delete the Element from Dialog
      #    |numülk2367|
 
+     # Then Success message should be displayed
+
+  Scenario: CitizeShip Create
+    And Click on the Element in LeftNav
+
+      |setup|
+      |parameters|
+      |citizenship|
+And Click on the Element in Dialog
+  |addButton|
+
+    And User sending the keys in Dialog
+      |nameInput|numSc12|
+      |shortName|nuSc1|
+
+    And Click on the Element in Dialog
+      |saveButton|
+    Then Success message should be displayed
+
+        And User delete the Element from Dialog
+          |numSc12|
+
       Then Success message should be displayed
+
