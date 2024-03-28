@@ -25,8 +25,10 @@ import org.openqa.selenium.support.PageFactory;
         public WebElement citizenship;
 
         @FindBy(xpath = "(//span[text()='Nationalities'])[1]")
-        public WebElement nationalities ;
+        public WebElement nationalities;
 
+        @FindBy(xpath = "(//span[text()='fees']")
+        public WebElement  fees;
         public WebElement getWebElement(String strElement) {
 
             switch (strElement){
@@ -35,6 +37,7 @@ import org.openqa.selenium.support.PageFactory;
                 case "countries" : return this.countries;
                 case "citizenship" : return this.citizenship;
                 case "nationalities " : return this.nationalities;
+                case "fees " : return this.fees;
             }
 
             return null;

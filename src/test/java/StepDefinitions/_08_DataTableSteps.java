@@ -17,26 +17,23 @@ public class _08_DataTableSteps {
 
     @And("Click on the Element in LeftNav")
     public void clickOnTheElementInLeftNav(DataTable linkler) {
-        List<String> strLinkList = linkler.asList(String.class);
+        List<String> strLinkList= linkler.asList(String.class);
 
-        for (int i = 0; i < strLinkList.size(); i++) {
-            // System.out.println(strLinkList.get(i));
-            WebElement linkWebElement = ln.getWebElement(strLinkList.get(i));
-            ln.myClick(linkWebElement);
-
-
+        for(int i=0;i< strLinkList.size();i++) {
+            //System.out.println(strLinkList.get(i));
+            WebElement linkWebElemnt= ln.getWebElement(strLinkList.get(i));
+            ln.myClick(linkWebElemnt);
         }
-
     }
 
     @And("Click on the Element in Dialog")
     public void clickOnTheElementInDialog(DataTable butonlar) {
-        List<String> strButtonList = butonlar.asList(String.class);
+        List<String> strButtonList= butonlar.asList(String.class);
 
-        for (int i = 0; i < strButtonList.size(); i++) {
-            // System.out.println(strLinkList.get(i));
-            WebElement linkWebElement = dc.getWebElement(strButtonList.get(i));
-            dc.myClick(linkWebElement);
+        for(int i=0;i< strButtonList.size();i++) {
+            //System.out.println(strLinkList.get(i));
+            WebElement linkWebElemnt= dc.getWebElement(strButtonList.get(i));
+            dc.myClick(linkWebElemnt);
         }
     }
 
@@ -59,10 +56,8 @@ public class _08_DataTableSteps {
         }
 
     }
+
+    @And("Click on the  Element in LeftNav")
+    public void clickOnTheElementInLeftNav() {
+    }
 }
-
-
-
-
-
-
