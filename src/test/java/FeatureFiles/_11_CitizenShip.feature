@@ -1,4 +1,6 @@
 #CitizenShip menusunun kayit ve silme özelligini
+# (DataTable ile) 5 farklı değer seti ile çalıştırınız.
+
 
 Feature: CitizenShip functionality
 
