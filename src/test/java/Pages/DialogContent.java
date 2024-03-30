@@ -64,8 +64,17 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
     public WebElement priorityCode;
 
-    @FindBy(xpath =  "//mat-slide-toggle[@formcontrolname='active']")
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
     public WebElement toggleBar;
+
+    @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
+    public WebElement userTyp;
+
+    @FindBy(xpath = "//span[text()=' Student ']")
+    public WebElement student;
+
+    @FindBy(xpath = "//span[text()=' Administrator ']")
+    public WebElement administrator ;
 
 
     public void deleteItem(String deleteName) {
@@ -96,6 +105,12 @@ public class DialogContent extends ParentPage {
             case "integrationCode" : return this.integrationCode;
             case "priorityCode" : return this.priorityCode;
             case "toggleBar" : return this.toggleBar;
+            case "userTyp" : return this.userTyp;
+            case "student" : return this.student;
+            case "administrator" : return this.administrator;
+
+
+
         }
         return null;
     }
