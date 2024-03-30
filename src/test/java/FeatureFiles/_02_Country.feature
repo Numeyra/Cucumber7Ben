@@ -1,5 +1,7 @@
 Feature: Country Functionality
 
+
+  @SmokeTest
   Scenario: Create a country
 
 
@@ -7,5 +9,5 @@ Feature: Country Functionality
     When Enter username and password and click login button
     Then User should login successfully
     And Navigate to country
-    When Creat a contry
+    When Create a country
     Then Success message should be displayed
