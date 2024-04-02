@@ -19,7 +19,7 @@
  extent.reporter.spark.start=true
  extent.reporter.spark.out=test-output/SparkReport/Spark.html
 
- 4-  extend report türkçe bilg çalışmaması sebebiyle kondu
+ 4-  extend report türkçe bilgisayarlarin  çalışmaması sebebiyle kondu
 
       public static WebDriver getDriver() {
             Locale.setDefault(new Locale("EN"));

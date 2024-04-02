@@ -11,8 +11,9 @@ Feature: Country Multi Scenario
       When Create a country
       Then Success message should be displayed
 
+  @Regression
      Scenario: Create a Country 2
-       When Create a country name as  "NUlke23"  code as "NUlke23Kod"
+       When Create a country name as  "NuUlke23"  code as "NuUlke23Kod"
        Then  Success message should be displayed
 
 #success yukari alinmaz cünkü sondadir.ilkler alinir

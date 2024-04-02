@@ -4,6 +4,7 @@ import Pages.DialogContent;
 import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -70,4 +71,7 @@ public class _08_DataTableSteps {
         }
 
 
+    @When("Create a country name as  {string}  code as {string}")
+    public void createACountryNameAsCodeAs(String NuUlke23, String NuUlke23Kod ) {
     }
+}
