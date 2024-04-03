@@ -1,7 +1,7 @@
 package Pages;
 
 
-import Utilities.GWD;
+import Utilities.GWD_old;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class ParentPage {
 
-    public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
+    public WebDriverWait wait = new WebDriverWait(GWD_old.getDriver(), Duration.ofSeconds(5));
 
     public void myClick(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -31,7 +31,7 @@ public class ParentPage {
 
     //elemente kadar scroll yap
     public void scrollToElement(WebElement element){
-        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        JavascriptExecutor js=(JavascriptExecutor) GWD_old.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
@@ -39,7 +39,7 @@ public class ParentPage {
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
 
-        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+        new Actions(GWD_old.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
         //sayfaya ESC tuşu gönderildi
     }
 

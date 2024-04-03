@@ -14,6 +14,8 @@ Feature: Citizenship Functionality
     Then User should login successfully
     And Navigate to CitizenShip
 
+
+  @Regression
   Scenario: Create a Citizenship with parameter
     When Create a CitizenShip name as "ulkercs1212" shortkod as "ukrkod1212"
     Then Success message should be displayed
