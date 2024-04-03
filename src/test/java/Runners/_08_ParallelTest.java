@@ -17,9 +17,14 @@ public class _08_ParallelTest extends AbstractTestNGCucumberTests {
 
 
 
+    @BeforeClass
+    @Parameters("browserTipi")
+    public void beforeClass(String browserName) {
+        GWD.threadBrowserName.set(browserName);
+        //Bu thread e browser adını set ettim.
 
 
-
+    }
 
 
 }
