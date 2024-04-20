@@ -1,6 +1,7 @@
 package StepDefinitions;
 
-import Utilities.GWD_old;
+import Utilities.ExcelUtility;
+import Utilities.GWD;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -17,6 +18,9 @@ public class Hooks {
    //her senaryodan sonra calisir
 public void after(Scenario senaryo){
 
+        ExcelUtility.writeToExcel("src/test/java/ApachePOI/resource/CucumberTestSonuclari.xlsx",
+                senaryo.getName()+" "+(senaryo.isFailed()? "Failed": "Passed") );
+
         //senaryo fail olduysa ekran kaydı al
         if (senaryo.isFailed()){
             // aşağıdaki bölüm sadece extend report plugini devrede ise açılır
@@ -27,7 +31,7 @@ public void after(Scenario senaryo){
 
 
 
-        GWD_old.quitDriver();
+        GWD.quitDriver();
 
 
 
