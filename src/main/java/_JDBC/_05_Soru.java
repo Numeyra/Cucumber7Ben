@@ -22,7 +22,7 @@ public void Test1() throws SQLException {
     for (int i =1; i <=sonSatirNo ; i++) {
         rs.absolute(i);
 
-        System.out.println(i + ".Satir:" + rs.getString(1));
+        System.out.println((i + 1 )+".Satir:" + rs.getString(1));
 
     }
 
